@@ -133,7 +133,7 @@ function teamMembers(answers){
 
                 cardTems.push(cardTem3)
     }
-    cardTems.join(" <br> ");
+    cardTems.join();
     console.log (cardTems);
 }
 
