@@ -17,6 +17,7 @@ Software Engineer Team
 ## Installation
 - Install Node.js  
 - Install package.json using command - ’npm init’
+- Install ’npm i express’.
 - Navigate to the index.js directory 
 - Install inquirer using command - ‘npm i’ 
 
