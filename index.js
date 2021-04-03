@@ -108,7 +108,7 @@ function generateFile(data){
                       </ul>
                     </div>
                   </div>
-                </div>`
+                </div>`              
     } else if(role === 'Engineer'){
          githubdetails(data.githubUsername)
          .then(response =>{
