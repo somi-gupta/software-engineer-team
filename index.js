@@ -60,11 +60,8 @@ function initialQuestion(){
             initialQuestion();
         } else {
             console.log (`Thank you!`)
-        }   
-       generateHtml(answers);
-    fs.writeFile('team.html', generateHtml(answers), (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
+        }  
+        generateFile(data) 
 })
     .catch(error =>{
         console.log ('Not a valid username', error);
@@ -93,7 +90,7 @@ function generateFile(data){
    if (role === 'Manager'){
         teamMember  = new Manager(name, id, email,officeNumber );
         role = teamMember.getRole();
-         teamEmpData.push = `
+        teamEmpData1 = `
         <div class="col-sm-6">
                   <div class="card">
                     <div class="card-body">
@@ -108,7 +105,8 @@ function generateFile(data){
                       </ul>
                     </div>
                   </div>
-                </div>`              
+                </div>` 
+                teamEmpData.push(teamEmpData1);
     } else if(role === 'Engineer'){
          githubdetails(data.githubUsername)
          .then(response =>{
@@ -117,7 +115,7 @@ function generateFile(data){
          })
         teamMember = new Engineer(name, id, email, githubUrl)
         role = teamMember.getRole();
-         teamEmpData.push = `
+        teamEmpData2 = `
         <div class="col-sm-6">
                   <div class="card">
                     <div class="card-body">
@@ -133,11 +131,13 @@ function generateFile(data){
                     </div>
                   </div>
                 </div>`
+                teamEmpData.push(teamEmpData2);
+
     }
     else if(role === 'Intern'){
         teamMember = new Intern(name, id, email, school)
         role = teamMember.getRole();
-         teamEmpData.push = `
+        teamEmpData3 = `
         <div class="col-sm-6">
                   <div class="card">
                     <div class="card-body">
@@ -152,14 +152,17 @@ function generateFile(data){
                       </ul>
                     </div>
                   </div>
-                </div>`             
+                </div>`   
+                teamEmpData.push(teamEmpData3);
+          
     }
+    teamEmpData.join("\n");
     // let htmlCardData = teamEmpData.join("");
-    console.log(`Data is ${teamEmpData}`);
-        fs.appendFile('team.html',teamEmpData.join(""), function (err) {
-        if (err) throw err;
-        console.log('Saved!');
-      });
+    // console.log(`Data is ${teamEmpData}`);
+    //     fs.appendFile('team.html',teamEmpData.join(""), function (err) {
+    //     if (err) throw err;
+    //     console.log('Saved!');
+    //   });
 }
 
 
@@ -187,5 +190,9 @@ ${ generateFile(data)}
 </body>
 </html>
     `
-    return html;
+    fs.writeFile('team.html', html, (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
 }
+
+generateHtml();
