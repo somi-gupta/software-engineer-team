@@ -48,4 +48,7 @@ For any questions releated to the project please contact below:
 ### User Name:  https://github.com/somi-gupta
 ### User Email: somi.guptaa@gmail.com
 
+## Screenshot of the deployed application
+![Team](./assets/images/Application-screenshot.jpg?raw=true)
+
 ---    

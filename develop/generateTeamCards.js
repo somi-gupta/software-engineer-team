@@ -37,7 +37,7 @@ function teamMembers(answers){
             <ul class="list-group">
               <li class="list-group-item">ID:  ${engineer.id}</li>
               <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a> </li>
-              <li class="list-group-item">Github: <a href="https://api.github.com/${engineer.gitHubUsername}">${engineer.gitHubUsername}</a> </li>
+              <li class="list-group-item">Github: <a target="_blank" href="https://api.github.com/${engineer.gitHubUsername}">${engineer.gitHubUsername}</a> </li>
             </ul>
           </div>
         </div>
