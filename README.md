@@ -29,7 +29,7 @@ Software Engineer Team
 - Once prompted 'No' add any more employees, team.html file will be generated displaying the team roaster.
 
 ## Video walkthrough of how to use the application
-https://drive.google.com/file/d/1To_fUaojpqmDCjjl-DzuaxJ6nUxOidnc/view 
+https://drive.google.com/file/d/198s7R9wbcyfJoYld9yH0xSGnRdOoqV3-/view
 
 ## Code contribution
 - https://nodejs.org/en/. 
